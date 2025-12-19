@@ -1,0 +1,183 @@
+Java Full Stack 
+
+1. What is Programming Language?
+->A programming language is a formal language used to write instructions that a computer can understand and execute to perform tasks.
+
+2. What is Assembler?
+->An assembler is a system program that converts assembly language code into machine language.
+
+3. What is MicroProcessor?
+->A microprocessor is the central processing unit (CPU) on a single chip that performs arithmetic, logic, and control operations of a computer.
+
+4. What is Compiler?
+A compiler is a software that translates an entire high-level programming language program into machine code before execution.
+
+Evolution of Language:
+a.fortrain - 1957
+b.cobol    - 1959
+c.BCPL     - 1962
+4.B        - 1969
+5.C        - 1972
+6.C++      -1982
+7.oak/Java - 1995
+
+Memory Devices 
+HDD - Hard Disk Drive
+RAM - Random Access Memory
+
+Flow of c program
+.c -> c compiler -> .obj  -> linking loader -> .exe -> microprocessor -> output
+
+Debugging in c
+.c -> interpreter -> obj line -> linking loader -> .exe -> microprocessor -> output
+                                                               ^
+                                                               |
+                                                               operating system
+
+Compiler vs Interpreter
+Compiler: Translates the entire program into machine code at once before execution.
+Interpreter: Translates and executes the program line by line at runtime.
+
+
+5. Why c and c++ is platform dependent?
+-> C and C++ are considered platform dependent because they are compiled into machine code specific to the operating system and hardware architecture.
+Once compiled, the generated executable works only on that particular platform (e.g., Windows, Linux, x86, ARM) unless recompiled for another platform.
+
+
+6. why is java platform independent?
+                                                           RAM       //checks if jvm is installed in the system or not.
+                                                            |
+.hll -> javac -> .Ill -> JIT -> .Mll -> linking loader -> .exe -> microprocessor -> output
+
+                  ------------------------------JDK-------------------------------
+                  |    ---------JRE-------------------------------------         |
+                  |   |   byte code verifier           java libraries  |         |
+                  |   |                                                |         |
+                  |   |            class loader                        |         |
+                  |   |                                                |         |
+                  |   |--------------------JVM-------------------------| JAVAC   |
+                  |   |                                                |         |
+                  |   |      JIT                     RUNTIME SYSTEM    |         |
+                  |   |                                                |         |
+                  |   |           Java Interpreter                     |         |
+                  |   --------------------------------------------------         |
+                  |                                                              |
+                  |--------------------------------------------------------------|   
+                      
+ Principle of Object Orientation
+ 
+ Object Orientation is the prospective of looking at the real world as a collection of object.
+ E.g -> pen,book,laptop,bottle 
+ 
+ No object in entire World is useless.Every object is in constant interaction with others objects.No object is perfectly isolated.
+ E.g -> laptop-charger
+ 
+ Each object belongs to a particular type which is known as class although their type class does'nt exists in real world . But object of this 
+ do exist in real world. Each object has something , every object does something. What all object has is known as properties, attribute, state. what all does 
+ is known as behaviour of object or action performed by an object.
+ a.Data type / data member
+ b.method /  member function
+ 
+ TO create an object in java, the JVM must be invoked. This is done with the help of new keyword, such object which we want to use in future or we wanr to use
+ multiple times, must be assigned to a reference. However if we want to create an object which we would use only once. For such object we don't need to provide 
+ any reference. This object for which no reference is assigned are also known as anonymous object.
+ 
+ 
+ 7.Why does a computer or memory devices understand only zeroes and ones?
+ 
+ ->Computers use zeroes and ones (binary) because their fundamental components, like transistors, work as simple electrical switches that are either 
+ ON (1) or OFF (0), representing the presence or absence of voltage; this binary system is the most reliable and efficient way to represent data and
+ instructions at the hardware level, making complex tasks possible through combinations of these two states. 
+ 
+ 
+A variable is a name assigned for a memory location inorder to efficiently store or retrieve data. 
+
+Data type - mechanism provided in programming languag which helps in converting real world data to binary form.
+
+Java inbuilt data type
+1.byte - 8 bit
+2.short - 2 byte
+3.long - 8 byte
+4.int  - 4 byte
+5.float - 4 byte
+6.char  - 2 byte
+7.boolean - 1 byte
+
+
+8. Why does Java provides us with 4 different data types to store real world data? 
+-> If we try to exceed the maximum range of a data type , we may encounter an overflow error and if we try to store value less than minimum range of a data type,
+ we encounter an underflow error. Java provides four different primitive data types for storing whole numbers (byte, short, int, and long) and two for fractional 
+ (floating-point) numbers (float and double) to allow programmers to optimize memory usage and performance based on the specific range and precision requirements
+  of the data.
+  
+  
+9. How are integers stored in memory?
+-> Integers are converted into binary form using base 2 format.
+
+
+TYPE CASTING
+Type casting refers to the process of storing one data type into variable of another data type.
+
+types:
+1.implicit - process of storing a value of smaller data types into  variable of bigger data type. Such conversions are internal , automatically performed by 
+the compiler. Hence this process is also known as implicit type casting or type conversion.
+
+2.explicit - when we try to store the value of bigger data type into a variable of smaller data types. such conversions are not allowed by the compiler 
+automatically. Hence we as programmers must externally instruct the compiler to perform the conversion. This type of conversion is also known as explicit type 
+casting. The major drawback of explicit type casting is that there might be loss in accuracy of data.
+ 
+ Type casting Chart
+ byte -> short -> int  ->  float -> double
+                  ^   \     /
+                  |     long  
+                  char   
+                          
+                       
+10. why do we need to add a suffix f and l for storing values inside float variable & long variable?
+ 
+ 
+ *  Whenever there is an expression involving multiple data type , the result will always have biggest data type.
+E.g -> double r = 5 + 10.5 + 10.5f
+
+
+Primitive Data type & their default values
+a.byte - 0
+b.short -0
+c.int   -0
+d.long  -0l
+e.float -0.0f
+f.double -0.0
+g.char  - \u0000
+h.boolean - false
+
+11. Is Java a pure object oriented programming language?
+-> Java is not pure object oriented because of its supports the primitive data type.
+
+
+Segment of JRE
+
+1.code segment
+2.static segment
+3.stack segment
+4.Heap segment
+
+ARRAYS
+
+-> if we want to store data in java , we can use the following approches:
+a. variable approach
+b. Array approach
+
+If we want to store data in java , we can use the variable approach but if we have to store data in large amount the variable approach is not efficient.
+In such cases we should go for arrays approach. Arrays are data structures which can be used to store similar type of data. In java , Arrays are treated as objects and 
+hence they alloted memory on the heap segment. 
+
+
+
+ 
+
+ 
+
+ 
+ 
+
+

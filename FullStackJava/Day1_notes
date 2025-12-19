@@ -163,7 +163,7 @@ Segment of JRE
 
 ARRAYS
 
--> if we want to store data in java , we can use the following approches:
+-> if we want to store data in java , we can use the following approaches:
 a. variable approach
 b. Array approach
 
@@ -171,6 +171,7 @@ If we want to store data in java , we can use the variable approach but if we ha
 In such cases we should go for arrays approach. Arrays are data structures which can be used to store similar type of data. In java , Arrays are treated as objects and 
 hence they alloted memory on the heap segment. 
 
+2D Arrays 
 
 
  

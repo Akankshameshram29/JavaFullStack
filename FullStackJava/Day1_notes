@@ -171,10 +171,165 @@ If we want to store data in java , we can use the variable approach but if we ha
 In such cases we should go for arrays approach. Arrays are data structures which can be used to store similar type of data. In java , Arrays are treated as objects and 
 hence they alloted memory on the heap segment. 
 
-2D Arrays 
+Types of ARRAY
+a.2D Jagged Arrays
+b.3D Jagged Arrays 
+
+ 
+Limitation of Array 
+
+1.Homogeneous data type
+2.Static size declaration
+3.Continuous memory allocation
+
+practice Questions
+
+1.ArmStrong number. - done
+2.Array sort - bubble , insertion, selection - done.
+3.Distinct Array.
+4.Each character count.
+5.fibonacci series -  done
+6.frequency in string.
+7.method overloading
+8.minimum - maximum
+9.missing number
+10.palindrome in sentences
+11.kite pattern
+12.Hollow triangle pattern
+13.prime numbers - done
+14.remove duplicates
+15.remove word
+16.reverse array - done
+17.reverse integer
+18.palindrome integer
+19.Rotational Array
+20.palindrome in string
+
+String 
+Sequence of character , refers to a series of characters enclosed within double quotes. String can also be treated as object in java. String can also be 
+treated as array of character.
+
+Types of String 
+a.mutable - which can be modified even after creation. we can create mutable string by using string buffer or string builder class.
+e.g -> StringBuilder,StringBuffer
+
+b.immutable - such string which cannot be modified after creation. 
+e.g ->String 
+
+Different ways to compare two Strings
+1.==
+2. equals()
+3.equalIgnoreCase()
+4. compareTo
+
+
+*when we concate two string using concate method , the resuting string will get memory on non-constant pool, + operator can also be used to concate two strings.
+ we use  the "+" operator along with string references , the resultant string will get memory on the non-constant code. However if we use plus operator along with raw string/data 
+ the resultant string will get memory on the constant port. 
+
+
+The intern method takes  a copy of the string present on the non-constant pool and move it to the constant pool.
+
+CompareTo - compares two string character by character. It would return positive value if the first string is greater, it is going to return a negative value
+if the second string is greater, it will return zero if both the strings are equal . It compares character based on their unicode value;
+
+Inbuilt Method in String
+
+
+Initial capacity of stringBuffer and StringBuilder is 16 , however if we exceed this capacity ,the striingBuffer or StringBuiulder will increase its capacity by
+ using the formula - > new capacity = old capacity * 2 +2;
+ Although the default initial capacity of a StringBuffer and StringBuilder is 16 we as a programmer can define(set) our own initial capacity.  
+
+Difference between String Buffer and String Builder
+String builder is not a thread safe class.
+
+
+Methods / Function
+-Group of Statements to perform specific tasks.
+
+syntax of method
+
+return_type name(parameter){
+//set of statements to perform a specific tasks
+}
+
+Types of method
+a. no input/no output
+b.no input/ output
+c.input/no output
+d.input/ output
+
+Flow of java Program
+As soon as method is called in java, its activation record is created on the stack segment.Activation record refers to a chunk of memory allocated on the 
+stack segment for the execution of a method. Activation record is also known as stack frame. All the variable which are created inside the body of a method are 
+allocated memory on the activation record of particular method. As soon as control reaches the end of the method, it returns to where it came from.
+As soon as control exits a method , its activation record gets deleted. When an activation record is deleted , all the variable present on that activation record 
+are also deleted. On the heap segment if there are such object to whom no one is refering to , this objects are also known as anonymous, orphan or garbage object.
+Such objects will be collected by the garbage collector thread. 
+In the above programs , the add method does not accept any value and does not return any value from caller of method , hence it is called no input- no output.
+
+
+Instance variable vs local variable
+1. Instance variable are defined inside the class but outside the method of class , local variables are defined inside a method of class.
+2.Instance variable are alloted memory when object is created, local variable are assigned the memory when the method is called.
+3.Instance variable are alloted memory inside the object on the heap segment, local variable are assigned on the activation record of the specific method of the 
+stack segment.
+4.Instance variable are deleted when the object is deleted , local variables are deleted when control exits the method and respective activation record is deleted.
+
+Printing a reference variable
+Method which returns a reference variable
+
+Method Overloading
+
+In the previous program , all the methods are performing same task of addition, however while calling this method one must remember the specific method name
+based on there requirement . The process of remembering so many names can be hectic , to avoid this problem in java, Java uses the concept of method overloading.
+Method overloading is a concept in which multiple methods of the same class have the same name but vary in their signature. The biggest advantage of method overloading
+ is that using a same method name , we can perform different operation.Method Overloading clearly eases the usability of code. 
+ Method Overloading is also known as compile time polymorphism. This is because during the compile time only, it is decided which method has to be called.
+ Since multiple methods are having the same name and ambiguity problem arises , to overcome this problem the compiler uses the following rules.
+ 1. the compiler is going to match the number of arguements. 
+ 2.if there are multiple methods with same name and same number of arguements, the compiler will now match the data types of arguements.
+ 3.If even after following the above two rule, if confusion is still there, now compiler will compare the order of data type
+ 
+ If Method overloading has to exists , one or more of the above rules must be satisfied. It is also known as virtual or false polymorphism.
+ 
+ For true polymorphism to exists , one isto many relationship should exists. But in method overloading , one isto many relationship does not exists. In the above 
+ example , it appears as single  add method is doing multiple tasks but in reality multiple add methods are doing one tasks each. It is an examle of false polymorphism and 
+ not true polymorphism. 
+ 
+ 1.Explore the concept of type promotion
+ 2.Can we overload main method?
+
+
+Encapsulation - is a paradigm of object oriented programming system which enables us to provide security to the important dat member of a class. In encapsulation 
+for providing security to the important data member, we declare the data members as private . The private member are accessible from within the same class,private
+prevents complete access but encapsulation does not prevent complete access rather it provides control access. Control access is provided using public setter and
+public getter. This setter and getter method must contain validation code in order to provide controlled access. Since setter and getter are public, they can be 
+accessed from even outside the class. Also since this setter and getter method are present within the same class as the private member they can access the private 
+members. 
+
+
+Constructor 
+
+What is Shadowing problem?
+According to industry standard, inside a setter method the name of a local variable must be same as the name of instance variable but when we do 
+this modification of values, it is not reflected in the instance variable. This is because the JVM is not able to differentiate between the local 
+variable and the instance variable. As a result all the modification are basically happening on the local variable themselves. It appears that 
+the local variables are shadowing the instance variable and hence the above problem is also knows as Shadowing problem. 
+
+Object Class
+ 
+
+
+
+
+
+
 
 
  
+
+
 
  
 

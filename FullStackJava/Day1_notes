@@ -205,6 +205,7 @@ practice Questions
 19.Rotational Array
 20.palindrome in string
 
+
 String 
 Sequence of character , refers to a series of characters enclosed within double quotes. String can also be treated as object in java. String can also be 
 treated as array of character.
@@ -317,7 +318,77 @@ this modification of values, it is not reflected in the instance variable. This 
 variable and the instance variable. As a result all the modification are basically happening on the local variable themselves. It appears that 
 the local variables are shadowing the instance variable and hence the above problem is also knows as Shadowing problem. 
 
+
 Object Class
+
+The parent class of all the classes in java in the Object Class.If a programmer does not explicitly extend to object Class , the compiler will 
+implicitly do so. The first statement inside a constructor is a call to the super method. Super method can be called by the programmer  or
+else it will implicitly added by the compiler. The super method takes the control to the constructor of the direct of the parent class.
+It is the object class constructor which is responsible to provide default values or initialize the instance variable of the child class. 
+
+LOCAL CHAINING AND CONSTRUCTOR CHAINING
+
+Super method is always the first line of the constructor regardless of whether programmer has explicitly written it or not.
+Super method takes the control to the constructor of the direct parent class , this is also known as constructor chaining. In other words constructor
+chaining is the process of the calling constructor of the direct parent class using super class. In only case, when the programmer has explicitly return or
+called this method super will not be the first line of the constructor. This method can be used to call constructor of the same class, the process of calling
+the constructor from another constructor of the same class by using this method is also known as local chaining. Both this method as well as super method have
+to be the first line of constructor. Hence inside a constructor we can either call this or super method. 
+ 
+
+Static Method
+
+1. A static variable can be accessed from a static method, static block, instance method as well as instance block.
+2. Instance variable can be accessed from instance method , instance block.
+3. Instance variable cannot be accessed from static method or block. 
+
+FLOW OF JAVA PROGRAM
+
+Operating system will load the JVM on to the stack segment,the class loader will load all the static component including static variables , static block 
+as well as static method on the static segment. Now static variable will be accessed memory as well as default values . Now static block shall be executed.
+The jvm calls the main method and rest of the program will go as specified in the main method. An instance block is called after object creation but 
+before constructor called. Static method can be called directly using class name. 
+
+
+We cannot access instance variable from a static block because the instance variable doesn't even exist when the static block is executed or the static 
+method might get executed.
+
+Q. when we should create a static variables?
+
+Such variable whose values is going to stay the same regardless of the object should be declared as static. Such variables whose value can be different
+every object can be created as instance. 
+
+Use of Static block
+
+-Static block can be used to initialize static variable . 
+-Static block can also be used to execute such lines of code which must execute before the main method. 
+
+Q.why is the main method declared as static?
+- Static method can be called directly using the class name.To ensure that JVM calls the main method  without the unnecessaru step of creating object, we
+declare the main method as static but if static is not present on main method then the JVM has to create an object and that is unnecesary step.
+
+COMMAND LINE ARGUEMENT
+It is set of data given to java program from command prompt. The command line arguement are collected by the runtime Dynamic Array of String defined in the 
+main method. 
+
+Q.Explain the main method in java?
+- The main method is declared as public in java so that the JVM can access it from outside the class. The main method is declared as static so that the JVM 
+can access it without creating an object of class.The main method is declared as void because it does not return any value to its caller.The main method does
+not return any value to the JVM because the JVM deos not expect any value to be returned when the control return to the JVM , the program has already terminated
+& hence at this point of time there is no sense for JVM to expect any value.  Main is name alloted to method , the main method also except a STRING of arguments
+this is used to accept command line arguement.
+
+The different Signature which is allowed for main method.
+
+1. psvm
+2.spvm
+3.psvm (string ... args)
+4.psvm (string args [])
+5. final synchronized psvm
+
+Q. Can we overload main method in java?
+Yes , we can overload the main method in java but JVM is going to call only such a main method which accpets a string [] arguements. 
+Main method can be overloaded but JVM will always call psvm accepting String [] args. 
  
 
 
@@ -327,11 +398,8 @@ Object Class
 
 
 
- 
 
 
-
- 
 
  
  

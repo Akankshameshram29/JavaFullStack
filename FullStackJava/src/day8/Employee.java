@@ -1,6 +1,6 @@
 package day8;
 
-public class Employee {
+public class Employee extends Object{
    private int Emp_id;
    private String name;
    private int salary;
@@ -11,6 +11,10 @@ public class Employee {
 	   this.salary = salary;
 	   
 	   
+   }
+   
+   public Employee() {
+	   this(101, "SANCHI",15000);
    }
    
    String getName() {

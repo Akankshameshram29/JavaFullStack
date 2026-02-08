@@ -11,7 +11,7 @@ public class triangle {
    }
    
    double disp() {
-	   double res = 0.5 * base * height;
+	   double res = 0.5 *  base * height;
 	   return res;
    }
 }

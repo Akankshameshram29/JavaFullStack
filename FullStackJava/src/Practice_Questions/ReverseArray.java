@@ -1,4 +1,4 @@
-package day8;
+package Practice_Questions;
 
 public class ReverseArray {
 

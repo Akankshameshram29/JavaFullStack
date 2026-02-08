@@ -1,4 +1,4 @@
-package day6;
+package Practice_Questions;
 
 public class BubbleSort {
 

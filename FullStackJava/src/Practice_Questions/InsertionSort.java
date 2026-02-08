@@ -1,4 +1,4 @@
-package day6;
+package Practice_Questions;
 
 public class InsertionSort {
 
@@ -26,8 +26,6 @@ public class InsertionSort {
 		System.out.println("AFTER SORTING");
 		for(int i=0;i<arr.length;i++) {
 			System.out.print(arr[i] + " ");
-		}
-		
+		}	
 	}
-
 }
